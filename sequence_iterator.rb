@@ -8,9 +8,22 @@ class SequenceIterator
   end
 
   def next
-    # todo
-    # implement method
-    # 1 -> 11 -> 21 -> 1211 -> 111221 -> ...
+    new_state = []
+    i = 1
+    count = 1
+    while i < @state.size do
+      if @state[i - 1] == @state[i] then
+        count += 1
+      else
+        new_state << count
+        new_state << @state[i - 1]
+        count = 1
+      end
+      i += 1
+    end
+    new_state << count
+    new_state << @state.last
+    @state = new_state
   end
 end
 
