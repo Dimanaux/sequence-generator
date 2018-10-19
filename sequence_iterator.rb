@@ -15,7 +15,7 @@ class SequenceIterator
       if @state[i - 1] == @state[i]
         count += 1
       else
-        new_state += [count, @state.last]
+        new_state += [count, @state[i - 1]]
         count = 1
       end
     end
