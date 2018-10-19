@@ -1,8 +1,8 @@
 require 'test/unit'
 require './sequence.rb'
 
+# test sequence
 class TestSequence < Test::Unit::TestCase
-
   def setup
     @sequence = Sequence.new 11
   end
@@ -14,6 +14,9 @@ class TestSequence < Test::Unit::TestCase
     assert_equal '1211', @sequence[3]
     assert_equal '111221', @sequence[4]
     assert_equal '312211', @sequence[5]
+  end
+
+  def test_extra_indexing
     assert_equal '13112221', @sequence[6]
     assert_equal '1113213211', @sequence[7]
     assert_equal '31131211131221', @sequence[8]
@@ -27,4 +30,3 @@ class TestSequence < Test::Unit::TestCase
     end
   end
 end
-
