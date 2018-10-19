@@ -9,9 +9,8 @@ class SequenceIterator
 
   def next
     new_state = []
-    i = 1
     count = 1
-    while i < @state.size do
+    (1...@state.size).each do |i|
       if @state[i - 1] == @state[i] then
         count += 1
       else
@@ -19,7 +18,6 @@ class SequenceIterator
         new_state << @state[i - 1]
         count = 1
       end
-      i += 1
     end
     new_state << count
     new_state << @state.last
