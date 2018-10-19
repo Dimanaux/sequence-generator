@@ -20,5 +20,11 @@ class TestSequence < Test::Unit::TestCase
     assert_equal '13211311123113112211', @sequence[9]
     assert_equal '11131221133112132113212221', @sequence[10]
   end
+
+  def test_bound
+    assert_raise do
+      @sequence[11]
+    end
+  end
 end
 
