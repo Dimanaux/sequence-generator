@@ -11,15 +11,15 @@ class SequenceIterator
   def next
     new_state = []
     count = 1
-    (1...@state.size).each do |i|
-      if @state[i - 1] == @state[i]
+    @state.each_cons(2) do |prev, curr|
+      if prev == curr
         count += 1
       else
-        new_state += [count, @state[i - 1]]
+        new_state << count << prev
         count = 1
       end
     end
-    new_state += [count, @state.last]
+    new_state << count << @state.last
     @state = new_state
   end
 end
