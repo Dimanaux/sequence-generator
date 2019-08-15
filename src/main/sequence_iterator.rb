@@ -23,4 +23,3 @@ class SequenceIterator
     @state = new_state
   end
 end
-
