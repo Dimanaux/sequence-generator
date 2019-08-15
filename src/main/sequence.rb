@@ -23,4 +23,3 @@ class Sequence
     ensure_length length
   end
 end
-
