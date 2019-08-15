@@ -26,4 +26,3 @@ class TestSequenceIterator < Test::Unit::TestCase
     assert_equal '312211', @iter.state
   end
 end
-
