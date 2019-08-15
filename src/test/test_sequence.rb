@@ -1,5 +1,5 @@
 require 'test/unit'
-require './sequence.rb'
+require_relative '../main/sequence.rb'
 
 # test sequence
 class TestSequence < Test::Unit::TestCase

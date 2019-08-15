@@ -1,4 +1,4 @@
-require './sequence_iterator.rb'
+require_relative './sequence_iterator.rb'
 
 # stores numbers from sequence, limits SequenceIterator
 class Sequence

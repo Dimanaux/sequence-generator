@@ -1,4 +1,4 @@
-require './sequence_iterator.rb'
+require_relative '../main/sequence_iterator.rb'
 require 'test/unit'
 
 # tests SequenceIterator
